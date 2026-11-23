@@ -16,17 +16,15 @@
       box-sizing: border-box;
     }
 
-    html {
+    html, body {
       width: 100%;
       min-height: 100%;
       background: #770024;
     }
 
     body {
-      width: 100%;
       min-height: 100vh;
       min-height: 100dvh;
-      background: #770024;
       overflow-x: hidden;
     }
 
@@ -66,18 +64,10 @@
 
     /* MOBILE PHONES */
     @media (max-width: 600px) {
-      html, body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
       .video-container {
         width: 100%;
         padding: 0;
         margin: 0;
-        justify-content: center;
-        align-items: flex-start;
       }
 
       video {
@@ -103,9 +93,7 @@
       disableremoteplayback
       aria-label="Pie With a Purpose thank-you animation"
     >
-      <source
-        src="PWP%20Video.mp4"
-        type="video/mp4">
+      <source src="video.mp4" type="video/mp4">
     </video>
   </main>
 </body>
