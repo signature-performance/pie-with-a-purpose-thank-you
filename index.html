@@ -64,19 +64,10 @@
 
     /* MOBILE PHONES */
     @media (max-width: 600px) {
-      .video-container {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-      }
-
       video {
         width: 100%;
         max-width: none;
         height: auto;
-        margin: 0;
-        padding: 0;
-        object-fit: contain;
       }
     }
   </style>
@@ -85,6 +76,7 @@
 <body>
   <main class="video-container">
     <video
+      id="thankYouVideo"
       autoplay
       muted
       playsinline
@@ -96,5 +88,14 @@
       <source src="maroon.mp4" type="video/mp4">
     </video>
   </main>
+
+  <script>
+    const video = document.getElementById("thankYouVideo");
+
+    video.addEventListener("ended", function () {
+      video.currentTime = Math.max(0, video.duration - 0.05);
+      video.pause();
+    });
+  </script>
 </body>
 </html>
